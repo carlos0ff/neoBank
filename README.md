@@ -53,5 +53,5 @@ git clone https://github.com/carlos0ff/neoBank.git
 cd neoBank
 
 # Compile e execute
-./mvnw compile
-./mvnw exec:java
+javac src/Main.java
+java src/Main.java
