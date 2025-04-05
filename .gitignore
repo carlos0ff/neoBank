@@ -1,0 +1,13 @@
+# Arquivos e pastas do Java
+*.class
+*.jar
+*.log
+*.out
+*.tmp
+
+# Configurações de IDEs
+/.idea/
+/.vscode/
+/target/
+/bin/
+/*.iml
