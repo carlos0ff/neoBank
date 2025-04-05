@@ -1,57 +1,81 @@
-package main;
+package menu;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+
 import utils.CleanScreen;
+import utils.ConsoleStyle;
 
 
-public class MainMenu {
-
-    public static final String RESET   = "\033[0m";
-    public static final String SUCCESS = "\033[34m"; // Azul
-    public static final String INFO    = "\033[32m"; // Verde
-    public static final String WARNING = "\033[31m"; // Vermelho
-    public static final String DANGER  = "\033[33m"; // Amarelo
-    public static final String BOLDER  = "\033[1m";  // Negrito
+public class MainMenu implements ConsoleStyle
+{
 
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        int choice;
+        int option = -1; 
 
         do {
-            CleanScreen.clean(); 
+            printMenu();
+            System.out.print("Your choice: ");
 
-            if (hasNextInt) {
-                
+            if (scanner.hasNextInt()) {
+                option = scanner.nextInt();
+                scanner.nextLine(); 
+            } else {
+                System.out.println(DANGER + "\nInvalid input. Please enter a number.");
+                scanner.nextLine(); 
+                continue;
             }
 
-            handleOption(choice);
+            handleOption(option);
 
-        } while (choice != 0);
-
-        scanner.close();
+        } while (option != 0);
     }
 
-    private static void printMenu(){
-        
+    private static void printMenu() {
+        System.out.println("\n═══════════════════════════════════════════");
+        System.out.println("         NEO BANK  - INTERNET BANKING        ");
+        System.out.println("═════════════════════════════════════════════");
+        System.out.println("   [ 1 ] CAIXA ECONÔMICA");
+        System.out.println("   [ 2 ] BRADESCO");
+        System.out.println("   [ 3 ] ITAÚ UNIBANCO");
+        System.out.println("   [ 4 ] BANCO DO BRASIL");
+        System.out.println("   [ 0 ] Exit");
+        System.out.println("═══════════════════════════════════════════");
     }
 
-    private static void handleOption(int choice) throws InterruptedException 
+    private static void handleOption(int option) throws InterruptedException 
     {
-        switch (choice) {
+        CleanScreen.clean();
+
+        switch (option) {
             case 1:
-                System.out.println("\nYour Selected  " + BOLDER + INFO + "CAIXA" + RESET);
-                Thread.sleep(2000); 
+                System.out.println(INFO + "You selected CAIXA ECONÔMICA." + RESET);
+                pause();
+                break;
+
+            case 2:
+                System.out.println(INFO + "You selected" + BOLDER + " BRADESCO." + RESET);
+                printMenu(scanner);
+                break;
+
+            case 3:
+                System.out.println(INFO + "You selected " + BOLDER + "ITAÚ UNIBANCO." + RESET);
+                pause();
+                break;
+
+            case 4:
+                System.out.println(INFO + "You selected " + BOLDER + "BANCO DO BRASIL." + RESET);
+                pause();
                 break;
 
             case 0:
-                System.out.println(WARNING + "Saindo do programa..." + RESET);
-                Thread.sleep(1000);
+                System.out.println(WARNING + "Exiting system..." + RESET);
                 break;
 
             default:
-                System.out.println(DANGER + "Opção inválida!" + RESET);
-                Thread.sleep(1500);
-                break;
+                System.out.println(BOLDER + DANGER + "\nInvalid option. Please try again." + RESET);
         }
     }
 }
