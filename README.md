@@ -53,5 +53,4 @@ git clone https://github.com/carlos0ff/neoBank.git
 cd neoBank
 
 # Compile e execute
-javac src/Main.java
-java src/Main.java
+javac src/Main.java && java src/Main.java
