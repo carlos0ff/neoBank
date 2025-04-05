@@ -37,14 +37,6 @@ Com uma interface simples via console, você poderá:
 
 Sem interface gráfica ou web – 100% no terminal, direto ao ponto. 💻⚡
 
-## ⚙️ Tecnologias Utilizadas
-
-- Java 17+
-- Spring Boot (quando aplicável)
-- Padrão MVC
-- Orientação a Objetos
-- Banco de dados em memória (ou estrutura simulada)
-
 ## 🚀 Como Rodar
 
 ```bash
