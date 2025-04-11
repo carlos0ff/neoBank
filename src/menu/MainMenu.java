@@ -1,19 +1,15 @@
 package menu;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
 import utils.CleanScreen;
-import utils.ConsoleStyle;
+import utils.Loading;
+import utils.InnerConsoleStyle;
 
-
-public class MainMenu implements ConsoleStyle
-{
+public class MainMenu implements InnerConsoleStyle {
 
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        int option = -1; 
+        int option = -1;
 
         do {
             printMenu();
@@ -21,16 +17,18 @@ public class MainMenu implements ConsoleStyle
 
             if (scanner.hasNextInt()) {
                 option = scanner.nextInt();
-                scanner.nextLine(); 
+                scanner.nextLine();
             } else {
-                System.out.println(DANGER + "\nInvalid input. Please enter a number.");
-                scanner.nextLine(); 
+                System.out.println(DANGER + "\nInvalid input. Please enter a number." + RESET);
+                scanner.nextLine();
                 continue;
             }
 
             handleOption(option);
 
         } while (option != 0);
+
+        scanner.close();
     }
 
     private static void printMenu() {
@@ -45,19 +43,20 @@ public class MainMenu implements ConsoleStyle
         System.out.println("═══════════════════════════════════════════");
     }
 
-    private static void handleOption(int option) throws InterruptedException 
-    {
+    private static void handleOption(int option) throws InterruptedException {
         CleanScreen.clean();
 
         switch (option) {
             case 1:
+                Loading.show("Loading CAIXA ECONÔMICA data", 15);
                 System.out.println(INFO + "You selected CAIXA ECONÔMICA." + RESET);
                 pause();
                 break;
 
             case 2:
-                System.out.println(INFO + "You selected" + BOLDER + " BRADESCO." + RESET);
-                printMenu(scanner);
+                Loading.show("Carregando dados da CAIXA ECONÔMICA", 15);
+                System.out.println(INFO + "You selected " + BOLDER + "BRADESCO." + RESET);
+                pause(); // corrigido
                 break;
 
             case 3:
@@ -71,11 +70,18 @@ public class MainMenu implements ConsoleStyle
                 break;
 
             case 0:
-                System.out.println(WARNING + "Exiting system..." + RESET);
+                Loading.show("Terminating the application", 10);
+
+                System.out.println(WARNING + "System closed successfully!" + RESET);
                 break;
 
             default:
                 System.out.println(BOLDER + DANGER + "\nInvalid option. Please try again." + RESET);
         }
+    }
+
+    private static void pause() {
+        System.out.print(BOLDER + "\nPressione ENTER para continuar..." + RESET);
+        new Scanner(System.in).nextLine();
     }
 }
