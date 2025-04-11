@@ -53,6 +53,7 @@ public class MainMenu implements InnerConsoleStyle {
                 pause();
                 break;
 
+                git
             case 2:
                 Loading.show("Carregando dados da CAIXA ECONÔMICA", 15);
                 System.out.println(INFO + "You selected " + BOLDER + "BRADESCO." + RESET);
