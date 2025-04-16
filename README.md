@@ -111,8 +111,7 @@ src/
 Contribuições são bem-vindas! Se você quiser adicionar exemplos, melhorar a estrutura ou traduzir conteúdo, sinta-se à vontade para bifurcar este repositório e abrir um pull request.
 
 ## 👨‍💻 Autor
-Feito com ❤️ por [Carlos](https://github.com/carlos0ff)
-Se gostou do projeto, deixe uma ⭐️, contribua com PRs ou me apoie no GitHub Sponsors!
+Criado por [Carlos](https://github.com/carlos0ff) – sinta-se à vontade para entrar em contato!
 
 ### 📄 Licença
 Distribuído sob licença MIT.
