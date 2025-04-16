@@ -1,4 +1,4 @@
-package utils;
+package br.com.neo.utils;
 
 public class Validator {
 
