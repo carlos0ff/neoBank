@@ -1,10 +1,10 @@
-<h1 align="center">💻 Neo Bank - Simulando um Banco Digital </h1>
-<p align="center">Uma experiência bancária minimalista diretamente no terminal, construída com Java e Spring Boot.</p>
+<h1 align="center">💳 Neo Bank - Terminal Banking Experience</h1>
+<p align="center">Um banco digital minimalista no terminal, feito com Java e Spring Boot.</p>
 
 <p align="center">
-  <a href="https://github.com/sponsors/carlos0ff">
+<!--   <a href="https://github.com/sponsors/carlos0ff">
     <img src="https://img.shields.io/badge/Sponsor-%23EA4AAA.svg?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor">
-  </a>
+  </a> -->
   <a href="https://github.com/carlos0ff/neoBank/stargazers">
     <img src="https://img.shields.io/github/stars/carlos0ff/neoBank?style=for-the-badge&color=yellow" alt="Stars">
   </a>
@@ -23,26 +23,97 @@
 
 ## 🧠 Sobre o Projeto
 
-O **Neo Bank** é uma aplicação Java que simula operações bancárias básicas através do terminal/console. Ideal para fins educacionais, prática de lógica de programação, e conceitos de orientação a objetos em Java.
+O **Neo Bank** é uma aplicação de console que simula operações bancárias essenciais. Desenvolvida com foco educacional, é ideal para quem quer aprender Java, lógica de programação e princípios de orientação a objetos.
 
-## 🖥️ Execução via Terminal
+### ✨ Recursos disponíveis:
 
-Com uma interface simples via console, você poderá:
+- 📲 Abertura e acesso de contas
+- 💸 Depósitos e saques
+- 🔁 Transferências entre contas
+- 📄 Geração de extrato bancário
+- 🎛️ Menus interativos com navegação via terminal
 
-- Criar e acessar contas bancárias
-- Verificar saldo
-- Realizar depósitos e saques
-- Simular transferências entre contas
-- Ver o extrato de operações
+> **Tudo 100% no terminal. Sem interface gráfica. Sem dependências pesadas. Simples, direto ao ponto.**
 
-Sem interface gráfica ou web – 100% no terminal, direto ao ponto. 💻⚡
+---
 
-## 🚀 Como Rodar
+## ⚙️ Tecnologias Utilizadas
+
+- Java 17+
+- Spring Boot (opcional/futuramente)
+- ANSI Escape Codes (cores no terminal)
+- Paradigma orientado a objetos
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+### 🔧 Pré-requisitos
+- Java 17 ou superior instalado
+- Terminal (bash, zsh, cmd ou PowerShell)
+
+### ▶️ Executar localmente
 
 ```bash
 # Clone o repositório
 git clone https://github.com/carlos0ff/neoBank.git
 cd neoBank
 
-# Compile e execute
-javac src/com/banco/Main.java && java src/coom/banco/Main.java
+# Compile a aplicação 
+javac src/zecabank/Main.java
+
+# Execute
+java src/zecabank/Main
+```
+>Obs: certifique-se de que a estrutura de diretórios está correta e todos os arquivos .java estão presentes.
+
+### 📂 Estrutura do Projeto
+```bash
+src/
+├── br/
+│   └── com/
+│       └── suapackage/
+│           ├── app/                     # Pontos de entrada do programa (Main.java)
+│           │   └── Main.java
+│           │
+│           ├── core/                    # Regras de negócio (services, lógica principal)
+│           │   └── services/
+│           │       └── ExtractService.java
+│           │
+│           ├── domain/                  # Representações de dados (Transaction, Cliente, etc)
+│           │   ├── models/
+│           │   │   └── Transaction.java
+│           │   └── enums/
+│           │       └── BankType.java
+│           │
+│           ├── presentation/           # Interação com usuário (menus, UI de console)
+│           │   ├── menu/
+│           │   │   ├── ClientAccess.java
+│           │   │   └── MainMenu.java
+│           │   └── style/
+│           │       ├── InnerConsoleStyle.java
+│           │       └── StyledText.java
+│           │
+│           ├── utils/                  # Utilitários auxiliares e helpers
+│           │   ├── CleanScreen.java
+│           │   ├── Loading.java
+│           │   └── Validator.java
+│
+├── images/                              # Imagens usadas no projeto
+├── docs/                                # Documentação
+│   └── README.md
+├── .gitignore
+├── LICENSE
+└── README.md
+
+```
+## 🤝 Contribuindo
+Contribuições são bem-vindas! Se você quiser adicionar exemplos, melhorar a estrutura ou traduzir conteúdo, sinta-se à vontade para bifurcar este repositório e abrir um pull request.
+
+## 👨‍💻 Autor
+Feito com ❤️ por [Carlos](https://github.com/carlos0ff)
+Se gostou do projeto, deixe uma ⭐️, contribua com PRs ou me apoie no GitHub Sponsors!
+
+### 📄 Licença
+Distribuído sob licença MIT.
+Veja o arquivo LICENSE para mais detalhes.
