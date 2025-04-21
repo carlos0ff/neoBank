@@ -21,7 +21,7 @@ public class CleanScreen {
             }
             
         } catch (Exception e) {
-            System.out.println("Não foi possível limpar a tela: " + e.getMessage());
+            System.out.println("Unable to clear screen:" + e.getMessage());
         }
     }
 }

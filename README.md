@@ -46,3 +46,42 @@ cd neoBank
 
 # Compile e execute
 javac src/com/banco/Main.java && java src/coom/banco/Main.java
+
+```bash
+src/
+├── br/
+│   └── com/
+│       └── neo/
+│           ├── app/                     # Pontos de entrada do programa (Main.java)
+│           │   └── Main.java
+│           │
+│           ├── core/                    # Regras de negócio (services, lógica principal)
+│           │   └── services/
+│           │       └── ExtractService.java
+│           │
+│           ├── domain/                  # Representações de dados (Transaction, Cliente, etc)
+│           │   ├── models/
+│           │   │   └── Transaction.java
+│           │   └── enums/
+│           │       └── BankType.java
+│           │
+│           ├── presentation/           # Interação com usuário (menus, UI de console)
+│           │   ├── menu/
+│           │   │   ├── ClientAccess.java
+│           │   │   └── MainMenu.java
+│           │   └── style/
+│           │       ├── InnerConsoleStyle.java
+│           │       └── StyledText.java
+│           │
+│           ├── utils/                  # Utilitários auxiliares e helpers
+│           │   ├── CleanScreen.java
+│           │   ├── Loading.java
+│           │   └── Validator.java
+│
+├── images/                              # Imagens usadas no projeto
+├── docs/                                # Documentação
+│   └── README.md
+├── .gitignore
+├── LICENSE
+└── README.md
+```
