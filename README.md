@@ -1,4 +1,4 @@
-<h1 align="center">💻 Neo Bank - Simulando um Banco Digital </h1>
+<h1 align="center">💻 Bankly - Simulando um Banco Digital </h1>
 <p align="center">Uma experiência bancária minimalista diretamente no terminal, construída com Java e Spring Boot.</p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ## 🧠 Sobre o Projeto
 
-O **Neo Bank** é uma aplicação Java que simula operações bancárias básicas através do terminal/console. Ideal para fins educacionais, prática de lógica de programação, e conceitos de orientação a objetos em Java.
+O **Bankly** é uma aplicação Java que simula operações bancárias básicas através do terminal/console. Ideal para fins educacionais, prática de lógica de programação, e conceitos de orientação a objetos em Java.
 
 ## 🖥️ Execução via Terminal
 
@@ -46,6 +46,7 @@ cd neoBank
 
 # Compile e execute
 javac src/com/banco/Main.java && java src/coom/banco/Main.java
+```
 
 ```bash
 src/
