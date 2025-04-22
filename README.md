@@ -86,3 +86,30 @@ src/
 ├── LICENSE
 └── README.md
 ```
+--- 
+
+## 🤝🏼 Contribuições são bem-vindas! Siga estes passos:
+
+- Faça um fork do projeto
+- Crie uma branch
+```bash
+git checkout -b feature/nova-funcionalidade
+```
+- Commit suas mudanças
+```bash
+  git commit -m 'Adiciona nova funcionalidade'
+```
+- Push para a branch
+```bash
+ git push origin feature/nova-funcionalidade
+```
+- Abra um Pull Request 
+
+--- 
+
+## 📄 Licença
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
+
+--- 
+
+<p align="center"> Desenvolvido com ❤️ por <a href="https://github.com/carlos0ff">Carlos</a> </p>
