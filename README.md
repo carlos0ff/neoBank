@@ -88,7 +88,8 @@ src/
 ```
 --- 
 
-## 🤝🏼 Contribuições são bem-vindas! Siga estes passos:
+## 🤝🏼 Contribuições 
+são bem-vindas! Siga estes passos:
 
 - Faça um fork do projeto
 - Crie uma branch
