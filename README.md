@@ -1,5 +1,8 @@
 <h1 align="center">💻 Bankly - Simulando um Banco Digital </h1>
-<p align="center">Um projeto feito para rodar exclusivamente no terminal/console, oferecendo uma experiência bancária minimalista com Java</p>
+<p align="center">
+  Um projeto feito para rodar exclusivamente no terminal/console, <br />
+  oferecendo uma experiência bancária minimalista com Java
+</p>
 
 <p align="center">
   <a href="https://github.com/carlos0ff/neoBank/stargazers">
