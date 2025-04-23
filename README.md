@@ -1,10 +1,7 @@
 <h1 align="center">💻 Bankly - Simulando um Banco Digital </h1>
-<p align="center">Uma experiência bancária minimalista diretamente no terminal, construída com Java e Spring Boot.</p>
+<p align="center">Um projeto feito para rodar exclusivamente no terminal/console, oferecendo uma experiência bancária minimalista com Java</p>
 
 <p align="center">
-  <a href="https://github.com/sponsors/carlos0ff">
-    <img src="https://img.shields.io/badge/Sponsor-%23EA4AAA.svg?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor">
-  </a>
   <a href="https://github.com/carlos0ff/neoBank/stargazers">
     <img src="https://img.shields.io/github/stars/carlos0ff/neoBank?style=for-the-badge&color=yellow" alt="Stars">
   </a>
@@ -47,45 +44,48 @@ cd neoBank
 # Compile e execute
 javac src/com/banco/Main.java && java src/coom/banco/Main.java
 ```
+### 📁 Estrutura do Repositório
 
 ```bash
-src/
-├── br/
-│   └── com/
-│       └── neo/
-│           ├── app/                     # Pontos de entrada do programa (Main.java)
-│           │   └── Main.java
-│           │
-│           ├── core/                    # Regras de negócio (services, lógica principal)
-│           │   └── services/
-│           │       └── ExtractService.java
-│           │
-│           ├── domain/                  # Representações de dados (Transaction, Cliente, etc)
-│           │   ├── models/
-│           │   │   └── Transaction.java
-│           │   └── enums/
-│           │       └── BankType.java
-│           │
-│           ├── presentation/           # Interação com usuário (menus, UI de console)
-│           │   ├── menu/
-│           │   │   ├── ClientAccess.java
-│           │   │   └── MainMenu.java
-│           │   └── style/
-│           │       ├── InnerConsoleStyle.java
-│           │       └── StyledText.java
-│           │
-│           ├── utils/                  # Utilitários auxiliares e helpers
-│           │   ├── CleanScreen.java
-│           │   ├── Loading.java
-│           │   └── Validator.java
+bankly/
+├── src/
+│   ├── br/
+│   │   └── com/
+│   │       └── bankly/
+│   │           ├── app/                     # Ponto de entrada da aplicação (Main.java)
+│   │           │   └── Main.java
+│   │           │
+│   │           ├── core/                    # Regras de negócio (serviços, lógica principal)
+│   │           │   └── services/
+│   │           │       └── ExtractService.java
+│   │           │
+│   │           ├── domain/                  # Modelos de dados e enums
+│   │           │   ├── models/
+│   │           │   │   └── Transaction.java
+│   │           │   └── enums/
+│   │           │       └── BankType.java
+│   │           │
+│   │           ├── presentation/           # Camada de apresentação (menus e interface no terminal)
+│   │           │   ├── menu/
+│   │           │   │   ├── ClientAccess.java
+│   │           │   │   └── MainMenu.java
+│   │           │   └── style/
+│   │           │       ├── InnerConsoleStyle.java
+│   │           │       └── StyledText.java
+│   │           │
+│   │           └── utils/                  # Utilitários e helpers
+│   │               ├── CleanScreen.java
+│   │               ├── Loading.java
+│   │               └── Validator.java
 │
-├── images/                              # Imagens usadas no projeto
-├── docs/                                # Documentação
+├── images/                                 # Imagens usadas no projeto
+├── docs/                                   # Documentação do projeto
 │   └── README.md
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
+
 --- 
 
 ## 🤝🏼 Contribuições 
